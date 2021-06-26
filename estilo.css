@@ -9,7 +9,7 @@ html, body, #recipiente {
 }
 
 body {
-  background-color: #fff;
+  background-color: var(--background-color);
   font-family: "Verdana";
   margin: 0;
 }
@@ -23,7 +23,7 @@ strong {
 }
 
 #recipiente {
-  background-image: linear-gradient(to bottom, #f6f1b2, #4599b2 80%);
+  background-image: linear-gradient(to bottom, var(--linear-gradient-start), var(--linear-gradient-end) 80%);
   border-left: 1px solid #d3d3d3;
   border-right: 1px solid #d3d3d3;
 }
@@ -38,13 +38,13 @@ strong {
 
 #cardapio h3 {
   font-size: 18px;
-  color: #333;
+  color: var(--text-color);
   margin-top: 30px;
 }
 
 #cardapio article {
   font-size: 14px;
-  color: #333;
+  color: var(--text-color);
 }
 
 
@@ -95,7 +95,7 @@ strong {
 #cabecalho-pagina h2 {
   margin: 0;
   font-size: 24px;
-  color: #333;
+  color: var(--text-color);
   font-weight: normal;
   text-align: right;
 }
@@ -158,3 +158,20 @@ article {
 /* coloque aqui a media query para sobrescrever o valor
    das custom properties para o modo escuro */
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #eee;
+    --background-color: #414141;
+    --linear-gradient-start: #0d1a53;
+    --linear-gradient-end: #000522;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: #333;
+    --background-color: #fff;
+    --linear-gradient-start: #f6f1b2;
+    --linear-gradient-end: #4599b2;
+  }
+}
