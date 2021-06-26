@@ -126,6 +126,14 @@ article {
 
 /* EXERCÍCIO 7: o ticket */
 #ticket {
+  position: fixed;
+  left: -89px;
+  top: calc(50% - 42px); /* in this case, 42 is not the answer to the ultimate question about life, the universe and everything. 42 is half the ticket image height */
+  transition: left 100ms ease-out;
+}
+
+#ticket:hover {
+  left: 0;
 }
 
 #ticket:hover {
